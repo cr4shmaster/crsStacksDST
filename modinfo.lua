@@ -1,16 +1,9 @@
--- This mod adds:
---  Increased maximum stack size of all stackable items.
---  The ability to make some, previously non-stackable items, stackable
---  The ability to make animals and insects not require feeding
---  The ability to make disable the "murder" option for inventory insects and animals
+-- More information here: https://sites.google.com/view/cr4shmaster/stacks-ds-dst
 
--- Workshop Page: http://steamcommunity.com/sharedfiles/filedetails/?id=398570591
--- Author: cr4shmaster: http://steamcommunity.com/id/cr4shmaster
-
-name = "Stacks v2.0"
+name = "Stacks v2.0.2.2"
 description = "Modifies the maximum stack size of all stackable items."
 author = "cr4shmaster"
-version = "2.0.2"
+version = "2.0.2.2"
 forumthread = ""
 api_version = 10
 all_clients_require_mod = true
@@ -20,8 +13,8 @@ icon_atlas = "modicon.xml"
 icon = "modicon.tex"
 
 local crsToggle = {
-    {description = "Enabled", data = 1},
-    {description = "Disabled", data = 0},
+    {description = "Enabled", data = true},
+    {description = "Disabled", data = false},
 }
 
 local crsStacks = {
@@ -77,95 +70,95 @@ configuration_options = {
         name = "crsBeesDontDieToggle",
         label = "Bees Never Die",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     {
         name = "crsBeesRemoveMurderToggle",
         label = "Can't Murder Bees",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     -- butterflies
     {
         name = "crsButterfliesDontDieToggle",
         label = "Butterflies Never Die",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     {
         name = "crsButterfliesRemoveMurderToggle",
         label = "Can't Murder Butterflies",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     -- rabbits
     {
         name = "crsRabbitsDontDieToggle",
         label = "Rabbits Never Die",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     {
         name = "crsRabbitsCanStackToggle",
         label = "Stackable Rabbits",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     {
         name = "crsRabbitsRemoveMurderToggle",
         label = "Can't Murder Rabbits",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     -- birds
     {
         name = "crsBirdsDontDieToggle",
         label = "Birds Never Die",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     {
         name = "crsBirdsCanStackToggle",
         label = "Stackable Birds",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     {
         name = "crsBirdsRemoveMurderToggle",
         label = "Can't Murder Birds",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     -- moles
     {
         name = "crsMolesDontDieToggle",
         label = "Moles Never Die",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     {
         name = "crsMolesCanStackToggle",
         label = "Stackable Moles",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     {
         name = "crsMolesRemoveMurderToggle",
         label = "Can't Murder Moles",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     -- mosquitos
     {
         name = "crsMosquitosDontDieToggle",
         label = "Mosquitos Never Die",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
     {
         name = "crsMosquitosRemoveMurderToggle",
         label = "Can't Murder Mosquitos",
         options = crsToggle,
-        default = 1,
+        default = true,
     },
 }
