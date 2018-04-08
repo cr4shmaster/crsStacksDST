@@ -1,9 +1,9 @@
 -- More information here: https://sites.google.com/view/cr4shmaster/stacks-ds-dst
 
-name = "Stacks v2.0.2.2"
+name = "Stacks v2.0.2.3"
 description = "Modifies the maximum stack size of all stackable items."
 author = "cr4shmaster"
-version = "2.0.2.2"
+version = "2.0.2.3"
 forumthread = ""
 api_version = 10
 all_clients_require_mod = true
@@ -48,117 +48,131 @@ local crsStacks = {
 
 configuration_options = {
     {
-        name = "crsChangeSmallStacksSize",
+        name = "cfgChangeSmallStacksSize",
         label = "Small Stacks",
         options = crsStacks,
         default = 100,
     },
     {
-        name = "crsChangeMediumStacksSize",
+        name = "cfgChangeMediumStacksSize",
         label = "Medium Stacks",
         options = crsStacks,
         default = 100,
     },
     {
-        name = "crsChangeLargeStacksSize",
+        name = "cfgChangeLargeStacksSize",
         label = "Large Stacks",
         options = crsStacks,
         default = 100,
     },
     -- bees
     {
-        name = "crsBeesDontDieToggle",
+        name = "cfgBeesDontDieToggle",
         label = "Bees Never Die",
         options = crsToggle,
         default = true,
     },
     {
-        name = "crsBeesRemoveMurderToggle",
+        name = "cfgBeesRemoveMurderToggle",
         label = "Can't Murder Bees",
         options = crsToggle,
         default = true,
     },
     -- butterflies
     {
-        name = "crsButterfliesDontDieToggle",
+        name = "cfgButterfliesDontDieToggle",
         label = "Butterflies Never Die",
         options = crsToggle,
         default = true,
     },
     {
-        name = "crsButterfliesRemoveMurderToggle",
+        name = "cfgButterfliesRemoveMurderToggle",
         label = "Can't Murder Butterflies",
         options = crsToggle,
         default = true,
     },
     -- rabbits
     {
-        name = "crsRabbitsDontDieToggle",
+        name = "cfgRabbitsDontDieToggle",
         label = "Rabbits Never Die",
         options = crsToggle,
         default = true,
     },
     {
-        name = "crsRabbitsCanStackToggle",
+        name = "cfgRabbitsCanStackToggle",
         label = "Stackable Rabbits",
         options = crsToggle,
         default = true,
     },
     {
-        name = "crsRabbitsRemoveMurderToggle",
+        name = "cfgRabbitsRemoveMurderToggle",
         label = "Can't Murder Rabbits",
         options = crsToggle,
         default = true,
     },
     -- birds
     {
-        name = "crsBirdsDontDieToggle",
+        name = "cfgBirdsDontDieToggle",
         label = "Birds Never Die",
         options = crsToggle,
         default = true,
     },
     {
-        name = "crsBirdsCanStackToggle",
+        name = "cfgBirdsCanStackToggle",
         label = "Stackable Birds",
         options = crsToggle,
         default = true,
     },
     {
-        name = "crsBirdsRemoveMurderToggle",
+        name = "cfgBirdsRemoveMurderToggle",
         label = "Can't Murder Birds",
         options = crsToggle,
         default = true,
     },
     -- moles
     {
-        name = "crsMolesDontDieToggle",
+        name = "cfgMolesDontDieToggle",
         label = "Moles Never Die",
         options = crsToggle,
         default = true,
     },
     {
-        name = "crsMolesCanStackToggle",
+        name = "cfgMolesCanStackToggle",
         label = "Stackable Moles",
         options = crsToggle,
         default = true,
     },
     {
-        name = "crsMolesRemoveMurderToggle",
+        name = "cfgMolesRemoveMurderToggle",
         label = "Can't Murder Moles",
         options = crsToggle,
         default = true,
     },
     -- mosquitos
     {
-        name = "crsMosquitosDontDieToggle",
+        name = "cfgMosquitosDontDieToggle",
         label = "Mosquitos Never Die",
         options = crsToggle,
         default = true,
     },
     {
-        name = "crsMosquitosRemoveMurderToggle",
+        name = "cfgMosquitosRemoveMurderToggle",
         label = "Can't Murder Mosquitos",
         options = crsToggle,
+        default = true,
+    },
+    {
+        name = "cfgJerkyDoesntPerish",
+        label = "Jerky Doesn't Perish",
+        options = crsToggle,
+        default = true,
+    },
+    {
+        name = "cfgTestCheck",
+        label = "Installed",
+        options = {
+            {description = "Yes", data = true},
+        },
         default = true,
     },
 }

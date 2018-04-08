@@ -2,9 +2,9 @@ require = GLOBAL.require
 require "components/stackable"
 require "components/inventoryitem"
 
-TUNING.STACK_SIZE_LARGEITEM = GetModConfigData("crsChangeLargeStacksSize");
-TUNING.STACK_SIZE_MEDITEM = GetModConfigData("crsChangeMediumStacksSize");
-TUNING.STACK_SIZE_SMALLITEM = GetModConfigData("crsChangeSmallStacksSize"); 
+TUNING.STACK_SIZE_LARGEITEM = GetModConfigData("cfgChangeLargeStacksSize");
+TUNING.STACK_SIZE_MEDITEM = GetModConfigData("cfgChangeMediumStacksSize");
+TUNING.STACK_SIZE_SMALLITEM = GetModConfigData("cfgChangeSmallStacksSize"); 
 
 local r_s = GLOBAL.require("components/stackable_replica") -- Credit: Jupiter: http://steamcommunity.com/profiles/76561198204009267
 r_s._ctor = function(self, inst)
@@ -47,60 +47,72 @@ end
  -- make stackable
  AddPrefabPostInit("minotaurhorn", crsMakeStackable)
  AddPrefabPostInit("tallbirdegg", crsMakeStackable)
- if GetModConfigData("crsRabbitsCanStackToggle") then
+ if GetModConfigData("cfgRabbitsCanStackToggle") then
     AddPrefabPostInit("rabbit", crsMakeStackable)
  end
- if GetModConfigData("crsBirdsCanStackToggle")then
+ if GetModConfigData("cfgBirdsCanStackToggle")then
     AddPrefabPostInit("crow", crsMakeStackable)
     AddPrefabPostInit("robin", crsMakeStackable)
     AddPrefabPostInit("robin_winter", crsMakeStackable)
  end
- if GetModConfigData("crsMolesCanStackToggle") then
+ if GetModConfigData("cfgMolesCanStackToggle") then
     AddPrefabPostInit("mole", crsMakeStackable)
  end
  
  -- remove feedable
- if GetModConfigData("crsMolesDontDieToggle") then
+ if GetModConfigData("cfgMolesDontDieToggle") then
     AddPrefabPostInit("mole", crsUnmakeFeedable)
  end
- if GetModConfigData("crsRabbitsDontDieToggle") then
+ if GetModConfigData("cfgRabbitsDontDieToggle") then
     AddPrefabPostInit("rabbit", crsUnmakeFeedable)
  end
- if GetModConfigData("crsBirdsDontDieToggle") then
+ if GetModConfigData("cfgBirdsDontDieToggle") then
     AddPrefabPostInit("crow", crsUnmakeFeedable)
     AddPrefabPostInit("robin", crsUnmakeFeedable)
     AddPrefabPostInit("robin_winter", crsUnmakeFeedable)
  end
- if GetModConfigData("crsBeesDontDieToggle") then
+ if GetModConfigData("cfgBeesDontDieToggle") then
     AddPrefabPostInit("bee", crsUnmakeFeedable)
     AddPrefabPostInit("killerbee", crsUnmakeFeedable)
  end
- if GetModConfigData("crsButterfliesDontDieToggle") then
+ if GetModConfigData("cfgButterfliesDontDieToggle") then
     AddPrefabPostInit("butterfly", crsUnmakeFeedable)
  end
- if GetModConfigData("crsMosquitosDontDieToggle") then
+ if GetModConfigData("cfgMosquitosDontDieToggle") then
     AddPrefabPostInit("mosquito", crsUnmakeFeedable)
  end
 
  -- remove murder
- if GetModConfigData("crsMolesRemoveMurderToggle") then
+ if GetModConfigData("cfgMolesRemoveMurderToggle") then
     AddPrefabPostInit("mole", crsRemoveMurder)
  end
- if GetModConfigData("crsBeesRemoveMurderToggle") then
+ if GetModConfigData("cfgBeesRemoveMurderToggle") then
     AddPrefabPostInit("bee", crsRemoveMurder)
     AddPrefabPostInit("killerbee", crsRemoveMurder)
  end
- if GetModConfigData("crsButterfliesRemoveMurderToggle") then
+ if GetModConfigData("cfgButterfliesRemoveMurderToggle") then
     AddPrefabPostInit("butterfly", crsRemoveMurder)
  end
- if GetModConfigData("crsRabbitsRemoveMurderToggle") then
+ if GetModConfigData("cfgRabbitsRemoveMurderToggle") then
     AddPrefabPostInit("rabbit", crsRemoveMurder)
  end
- if GetModConfigData("crsBirdsRemoveMurderToggle") then
+ if GetModConfigData("cfgBirdsRemoveMurderToggle") then
     AddPrefabPostInit("crow", crsRemoveMurder)
     AddPrefabPostInit("robin", crsRemoveMurder)
     AddPrefabPostInit("robin_winter", crsRemoveMurder)
  end
- if GetModConfigData("crsMosquitosRemoveMurderToggle") then
+ if GetModConfigData("cfgMosquitosRemoveMurderToggle") then
     AddPrefabPostInit("mosquito", crsRemoveMurder)
  end
+
+local function crsRemovePerish(inst)
+    if inst.components.perishable and GLOBAL.TheWorld.ismastersim then
+        inst:RemoveComponent("perishable")
+    end
+end
+
+if GetModConfigData("cfgJerkyDoesntPerish") then
+    AddPrefabPostInit("meat_dried", crsRemovePerish)
+    AddPrefabPostInit("smallmeat_dried", crsRemovePerish)
+    AddPrefabPostInit("monstermeat_dried", crsRemovePerish)
+end
