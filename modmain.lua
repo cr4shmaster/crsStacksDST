@@ -115,5 +115,4 @@ if GetModConfigData("cfgJerkyDoesntPerish") then
     AddPrefabPostInit("meat_dried", crsRemovePerish)
     AddPrefabPostInit("smallmeat_dried", crsRemovePerish)
     AddPrefabPostInit("monstermeat_dried", crsRemovePerish)
-    AddPrefabPostInit("bird_egg", crsRemovePerish)
 end

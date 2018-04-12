@@ -1,9 +1,9 @@
 -- More information here: https://sites.google.com/view/cr4shmaster/stacks-ds-dst
 
-name = "Stacks v2.0.2.4"
+name = "Stacks v2.0.2.3"
 description = "Modifies the maximum stack size of all stackable items."
 author = "cr4shmaster"
-version = "2.0.2.4"
+version = "2.0.2.3"
 forumthread = ""
 api_version = 10
 all_clients_require_mod = true
@@ -164,12 +164,6 @@ configuration_options = {
     {
         name = "cfgJerkyDoesntPerish",
         label = "Jerky Doesn't Perish",
-        options = crsToggle,
-        default = true,
-    },
-    {
-        name = "cfgEggsDontPerish",
-        label = "Eggs Don't Perish",
         options = crsToggle,
         default = true,
     },
