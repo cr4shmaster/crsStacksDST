@@ -116,3 +116,18 @@ if GetModConfigData("cfgJerkyDoesntPerish") then
     AddPrefabPostInit("smallmeat_dried", crsRemovePerish)
     AddPrefabPostInit("monstermeat_dried", crsRemovePerish)
 end
+
+if GetModConfigData("cfgSeedsDontPerish") then
+    AddPrefabPostInit("seeds", crsRemovePerish)
+end
+
+if GetModConfigData("cfgVegSeedsDontPerish") then
+    AddPrefabPostInit("carrot_seeds", crsRemovePerish)
+    AddPrefabPostInit("corn_seeds", crsRemovePerish)
+    AddPrefabPostInit("dragonfruit_seeds", crsRemovePerish)
+    AddPrefabPostInit("durian_seeds", crsRemovePerish)
+    AddPrefabPostInit("eggplant_seeds", crsRemovePerish)
+    AddPrefabPostInit("pomegranate_seeds", crsRemovePerish)
+    AddPrefabPostInit("pumpkin_seeds", crsRemovePerish)
+    AddPrefabPostInit("watermelon_seeds", crsRemovePerish)
+end
