@@ -54,6 +54,7 @@ end
     AddPrefabPostInit("crow", crsMakeStackable)
     AddPrefabPostInit("robin", crsMakeStackable)
     AddPrefabPostInit("robin_winter", crsMakeStackable)
+    AddPrefabPostInit("canary", crsMakeStackable)
  end
  if GetModConfigData("cfgMolesCanStackToggle") then
     AddPrefabPostInit("mole", crsMakeStackable)
@@ -70,6 +71,7 @@ end
     AddPrefabPostInit("crow", crsUnmakeFeedable)
     AddPrefabPostInit("robin", crsUnmakeFeedable)
     AddPrefabPostInit("robin_winter", crsUnmakeFeedable)
+    AddPrefabPostInit("canary", crsUnmakeFeedable)
  end
  if GetModConfigData("cfgBeesDontDieToggle") then
     AddPrefabPostInit("bee", crsUnmakeFeedable)
@@ -100,6 +102,7 @@ end
     AddPrefabPostInit("crow", crsRemoveMurder)
     AddPrefabPostInit("robin", crsRemoveMurder)
     AddPrefabPostInit("robin_winter", crsRemoveMurder)
+    AddPrefabPostInit("canary", crsRemoveMurder)
  end
  if GetModConfigData("cfgMosquitosRemoveMurderToggle") then
     AddPrefabPostInit("mosquito", crsRemoveMurder)
