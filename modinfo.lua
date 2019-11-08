@@ -1,9 +1,9 @@
 -- More information here: https://sites.google.com/view/cr4shmaster/stacks-ds-dst
 
-name = "Stacks v2.0.2.5"
+name = "Stacks v2.0.3"
 description = "Modifies the maximum stack size of all stackable items."
 author = "cr4shmaster"
-version = "2.0.2.5"
+version = "2.0.3"
 forumthread = ""
 api_version = 10
 all_clients_require_mod = true

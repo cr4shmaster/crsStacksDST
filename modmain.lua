@@ -133,4 +133,10 @@ if GetModConfigData("cfgVegSeedsDontPerish") then
     AddPrefabPostInit("pomegranate_seeds", crsRemovePerish)
     AddPrefabPostInit("pumpkin_seeds", crsRemovePerish)
     AddPrefabPostInit("watermelon_seeds", crsRemovePerish)
+    AddPrefabPostInit("garlic_seeds", crsRemovePerish)
+    AddPrefabPostInit("onion_seeds", crsRemovePerish)
+    AddPrefabPostInit("pepper_seeds", crsRemovePerish)
+    AddPrefabPostInit("potato_seeds", crsRemovePerish)
+    AddPrefabPostInit("tomato_seeds", crsRemovePerish)
+    AddPrefabPostInit("asparagus_seeds", crsRemovePerish)
 end
